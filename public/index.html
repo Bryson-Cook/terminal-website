@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" />
+    <title>Bryson Cook</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body>
+    <template id="greeting">
+        >=>>=>                                                             >=>                          >=>      
+        >>   >=>                                                        >=>   >=>                       >=>      
+        >>    >=> >> >==> >=>   >=>  >===>     >=>     >==>>==>        >=>           >=>        >=>     >=>  >=> 
+        >==>>=>    >=>     >=> >=>  >=>      >=>  >=>   >=>  >=>       >=>         >=>  >=>   >=>  >=>  >=> >=>  
+        >>    >=>  >=>       >==>     >==>  >=>    >=>  >=>  >=>       >=>        >=>    >=> >=>    >=> >=>=>    
+        >>     >>  >=>        >=>       >=>  >=>  >=>   >=>  >=>        >=>   >=>  >=>  >=>   >=>  >=>  >=> >=>  
+        >===>>=>  >==>       >=>    >=> >=>    >=>     >==>  >=>          >===>      >=>        >=>     >=>  >=> 
+                           >=>
+                                              Welcome to my personal website!
+                                            Type 'help' for a list of commands. 
+    </template>
+    <script>
+        $('body').terminal({
+            about: function() {
+                this.echo("Yeah, the most important part of this entire website and...")
+                this.echo("I haven't done it yet :)");
+            },
+            clear: function() {
+                this.clear();
+            },
+            echo: function(string) {
+                this.echo(string);
+            },
+            help: function() {
+                this.echo('about\t- Cool information');
+                this.echo('clear\t- Clears the terminal');
+                this.echo('echo\t- Print stuff');
+                this.echo('help\t- Display this menu');
+                this.echo('restart\t- Reset the terminal');
+                this.echo('su\t\t- Do not use');
+            },
+            restart: function() {
+                this.reset();
+            },
+            su: function() {
+                this.echo('What are you doing?')
+                this.set_prompt("admin@brysoncook.com >> ")
+            }
+        }, {
+            greetings: greeting.innerHTML,
+            prompt: "guest@brysoncook.com >> ",
+            completion: true,
+            checkArity: false,
+            clear: false,
+            exit: false,
+        });
+    </script>
+</body>
+
+</html>
