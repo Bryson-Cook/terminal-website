@@ -20,68 +20,10 @@
         >===>>=>  >==>       >=>    >=> >=>    >=>     >==>  >=>          >===>      >=>        >=>     >=>  >=> 
                            >=>
                                               Welcome to my personal website!
-                                            Type 'help' for a list of commands. 
+                                            Type [[;white;black]'help'] for a list of commands. 
     </template>
-    <script>
-        $('body').terminal({
-            about: function() {
-                this.echo('I am a computer science student at Colorado State University, graduating December 2023,')
-                this.echo('actively seeking internship opportunities in software engineering or embedded systems.');
-                this.echo('With a current interest in OS development, I\'m working on an operating system for');
-                this.echo('the x86 architecture with plans to support a file system, command line interface,');
-                this.echo('and standalone bootloader.');
-            },
-            clear: function() {
-                this.clear();
-            },
-            contact: function() {
-                this.echo("Email:");
-                this.echo('\tbryson1@colostate.edu')
-            },
-            echo: function(string) {
-                this.echo(string);
-            },
-            help: function() {
-                this.echo('about\t- Cool information');
-                this.echo('clear\t- Clear the terminal');
-                this.echo('contact\t- Contact information');
-                this.echo('echo\t- Print stuff');
-                this.echo('help\t- Display this menu');
-                this.echo('links\t- Useful links')
-                // this.echo('projects\t= Filler');
-                this.echo('restart\t- Reset the terminal');
-                // this.echo('resume\t- That one document');
-                this.echo('su\t\t- Do not use');
-            },
-            links: function() {
-                this.echo('Github:');
-                this.echo('\thttps://github.com/Bryson-Cook')
-                this.echo('Linkedin:')
-                this.echo('\tMIA...')
-            },
-            projects: function() {
-                this.echo('Coming soon...');
-            },
-            restart: function() {
-                this.set_prompt('guest@brysoncook.com >> ');
-                this.reset();
-            },
-            resume: function() {
-                this.echo("Coming soon...");
-            },
-            su: function() {
-                this.echo('What are you doing?')
-                this.set_prompt('admin@brysoncook.com >> ')
-            }
-        }, {
-            greetings: greeting.innerHTML,
-            prompt: 'guest@brysoncook.com >> ',
-            completion: true,
-            checkArity: false,
-            clear: false,
-            exit: false,
-        });
-    </script>
+    <script src='js/script.js'></script>
+    
 </body>
 
 </html>
