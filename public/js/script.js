@@ -1,4 +1,6 @@
 var admin = false;
+var bool = 0;
+var currDate, futureDate, diff
 
 function white(input) {
     return '[[;white;black]' + input + ']';
@@ -6,10 +8,6 @@ function white(input) {
 
 function red(input) {
     return '[[;red;black]' + input + ']';
-}
-
-function blank() {
-
 }
 
 var cmd = {
@@ -45,7 +43,6 @@ var cmd = {
         this.echo(white('links') + '\t- Useful links')
         // this.echo('projects\t Very cool projects');
         this.echo(white('restart') + '\t- Reset the terminal');
-        // this.echo('resume\t- That one document');
         if(admin) {
             this.echo(white('secret') + '\t- What is this?')
         } else {
@@ -69,9 +66,6 @@ var cmd = {
         this.reset();
         admin = false;
     },
-    // resume: function() {
-    //     this.echo("Coming soon...");
-    // },
     su: function() {
         if(!admin) {
             this.echo()
@@ -83,15 +77,62 @@ var cmd = {
     },
     secret: function() {
         if(admin) {
-            this.echo()
-            this.echo("Welcome super user.")
-            this.echo('We regret to inform you that there is no mission available at this time.');
-            this.echo('Please be patient as we gather more intel. Thank you.')
-            this.echo()
+            if(bool == 0) {
+                this.echo()
+                this.echo('Welcome super user.')
+                this.echo('We regret to inform you that there is no mission available at this time.')
+                this.echo('Please be patient as we gather more intel. Thank you.')
+                this.echo()
+                bool = 1;
+            } else if (bool == 1) {
+                this.echo()
+                this.echo('Welcome super user.')
+                this.echo('As mentioned earlier, there is no mission available for you.')
+                this.echo('Check back within 5 seconds. Thank you.')
+                this.echo()
+                if (bool < 2) bool = 2;
+                if(bool == 2) {
+                    currDate = new Date()
+                    futureDate = new Date()
+                    seconds = currDate.getSeconds()
+                    futureDate.setSeconds(seconds+5)
+                    bool++
+                }
+                
+            } else {
+                currDate = new Date();
+                diff = (futureDate-currDate)/1000
+
+                if(diff > 0) {
+                    this.echo()
+                    this.echo("Well done super user.")
+                    this.echo("You have completed the mission.")
+                    this.echo("Redirecting you to your reward.")
+                    this.echo("Thank you.")
+                    this.echo()
+                    getResume()
+                    bool = 0
+                    
+                } else { 
+                    this.set_prompt('guest@brysoncook.com >> ')
+                    this.reset()
+                    this.echo("Mission failed.")
+                    admin = false
+                    bool = 0
+                 }
+            }
         } else {
             this.echo(red('Command \'secret\' Not Found!'))
         }
+    },
+    t: function() {
+        getResume()
     }
+}
+
+function getResume() {   
+    var url = './docs/resume.pdf';    
+    window.open(url,'Resume');  
 }
 
 $('body').terminal(cmd, {

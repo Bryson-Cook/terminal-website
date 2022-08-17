@@ -1,0 +1,14 @@
+Welcome back super user.
+
+We assumed you wanted some time off and therefore did not notify you about 
+your next mission. It seems that does not matter anymore as you have found
+this text file.
+
+Provided below is a message we recieved from headquarters.
+However, we haven't been able to fully decrypt it as of yet.
+If you are able to do so, please figure out what this message means.
+Thank you.
+
+Message:
+
+SGVsbG8hIApGaXJzdCBvZmYsIEkgd2FudCB0byBzYXkgdGhhbmsgeW91IGZvciB0YWtpbmcgdGltZSB0byBoYXZlIGZ1biB3aXRoIG15IHdlYnNpdGUuIFRoaXMgaXMganVzdCBhIGZ1biBsaXR0bGUgc2lkZSBob2JieSB0aGF0IEkgd29yayBvbiBpbiBteSBmcmVlIHRpbWUgKHdoYXQgbGl0dGxlIHRoYXQgSSBoYXZlLi4uKSBXaXRoIGhvdyBidXN5IEkgYW0sIEkgaGF2ZW4ndCBoYWQgdGhlIHRpbWUgdG8gY29uc3RydWN0IG1vcmUgb2YgYSBzdG9yeSBvciBnYW1lIHRvIGNvbnRpbnVlIHRoaXMgc2VjcmV0IGFnZW50IC8gc3VwZXIgdXNlciBzZXJpZXMuIElmIHlvdSBoYXZlIGFueSBpZGVhcyBvciBjcml0aXF1ZXMgZm9yIHRoaXMgc3RvcnkgKG9yIG15IGNvZGUpIHBsZWFzZSBmZWVsIHJlYWNoIHRvIHJlYWNoIG91dCB0byBtZSB2aWEgZW1haWwuIApUaGFuayB5b3UsCkJyeXNvbgo=

@@ -1,5 +1,0 @@
-[x] update 'about'
-[-] update 'resume' (resume link)
-[-] update 'projects'
-[-] beautify, add color, change font size
-[-] easter eggs?
