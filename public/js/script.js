@@ -125,9 +125,6 @@ var cmd = {
             this.echo(red('Command \'secret\' Not Found!'))
         }
     },
-    t: function() {
-        getResume()
-    }
 }
 
 function getResume() {   
